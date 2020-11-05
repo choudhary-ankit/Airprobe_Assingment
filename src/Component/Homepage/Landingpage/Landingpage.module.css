@@ -1,0 +1,19 @@
+.section_center{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.grid_arrng{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 50% 50%;
+    grid-gap: 80px;
+    align-items: center;
+    margin-top: 50px;
+}
+.img_para{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
