@@ -24,18 +24,22 @@ export default class Login extends Component {
         firebase.auth().createUserWithEmailAndPassword(this.state.UserEmail, this.state.UserPass)
         .then(()=>{
             alert("account created")
+            var user = firebase.auth().currentUser;
+            var d = new Date();
+            var date = d.getDate()+'-'+(d.getMonth()+1)+'-'+d.getFullYear();
+            var time = d.getHours() + ":" + d.getMinutes();
+            firebase.firestore().collection('userinfo').doc(user.uid).set({
+                UserName:this.state.UserName,
+                UserDate:date,
+                UserTime:time,
+                LoginCount:1
+            })
         })
         .catch((error)=>{
             let errormsg=error.message
             alert(errormsg)
-        })
-        firebase.auth().onAuthStateChanged((user)=>{
-            let userId=user.uid
-            firebase.firestore().collection('userinfo').doc(userId).set({
-                UserName:this.state.UserName,
-                LoginCount:1
-            })
-        })
+        })     
+        
     }
     render() {
         console.log(firebase.auth())

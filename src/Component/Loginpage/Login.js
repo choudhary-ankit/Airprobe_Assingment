@@ -11,7 +11,8 @@ export default class Login extends Component {
         this.state={
             UserEmail:'',
             UserPass:'',
-            Count:0
+            Count:0,
+            message:'',
         }
     }
     handleChange=(e)=>{
@@ -23,18 +24,16 @@ export default class Login extends Component {
         firebase.auth().signInWithEmailAndPassword(this.state.UserEmail, this.state.UserPass)
         .then(()=>{
             alert("sign In")
-        })
-        .catch((error)=>{
-            let errormsg=error.message
-            alert(errormsg)
-        })
-        firebase.auth().onAuthStateChanged((user)=>{
+            var user=firebase.auth().currentUser;
             var ref=firebase.firestore().collection('userinfo').doc(user.uid)
             ref.get().then((doc)=>{
                 if(doc.exists){
                     let userdata=doc.data()
                     var count=(Number(userdata.LoginCount)+1)
                     firebase.firestore().collection('userinfo').doc(user.uid).set({
+                        UserName:userdata.UserName,
+                        UserDate:userdata.UserDate,
+                        UserTime:userdata.UserTime,
                         LoginCount:count
                     })
                 }
@@ -42,7 +41,12 @@ export default class Login extends Component {
                     alert("no document")
                 }
             })
-            
+        })
+        .catch((error)=>{
+            let errormsg=error.message
+            this.setState({
+                message:errormsg
+            })
         })
         
     }
@@ -53,6 +57,9 @@ export default class Login extends Component {
                     <div>
                         <div className={Style.login_div}>
                             <Typography variant="h4" component="h4" className={Style.login_btn}>Login</Typography>
+                        </div>
+                        <div className={Style.error_msg}>
+                            <Typography variant="body2" style={{color:"red"}}>{this.state.message}</Typography>
                         </div>
                         <div className={Style.input_group}>
                             <input type="email" className={Style.input_field} placeholder="Email id" name="UserEmail" onChange={this.handleChange}></input>
