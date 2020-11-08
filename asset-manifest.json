@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/Airprobe_Assingment/static/css/main.55dbc0fa.chunk.css",
+    "main.js": "/Airprobe_Assingment/static/js/main.f5cf8895.chunk.js",
+    "main.js.map": "/Airprobe_Assingment/static/js/main.f5cf8895.chunk.js.map",
+    "runtime-main.js": "/Airprobe_Assingment/static/js/runtime-main.4a35bde1.js",
+    "runtime-main.js.map": "/Airprobe_Assingment/static/js/runtime-main.4a35bde1.js.map",
+    "static/css/2.55d8add8.chunk.css": "/Airprobe_Assingment/static/css/2.55d8add8.chunk.css",
+    "static/js/2.01407c2c.chunk.js": "/Airprobe_Assingment/static/js/2.01407c2c.chunk.js",
+    "static/js/2.01407c2c.chunk.js.map": "/Airprobe_Assingment/static/js/2.01407c2c.chunk.js.map",
+    "static/js/3.818e008b.chunk.js": "/Airprobe_Assingment/static/js/3.818e008b.chunk.js",
+    "static/js/3.818e008b.chunk.js.map": "/Airprobe_Assingment/static/js/3.818e008b.chunk.js.map",
+    "index.html": "/Airprobe_Assingment/index.html",
+    "static/css/2.55d8add8.chunk.css.map": "/Airprobe_Assingment/static/css/2.55d8add8.chunk.css.map",
+    "static/css/main.55dbc0fa.chunk.css.map": "/Airprobe_Assingment/static/css/main.55dbc0fa.chunk.css.map",
+    "static/js/2.01407c2c.chunk.js.LICENSE.txt": "/Airprobe_Assingment/static/js/2.01407c2c.chunk.js.LICENSE.txt",
+    "static/media/Login.module.css": "/Airprobe_Assingment/static/media/floating-solar-plant.e7680d15.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4a35bde1.js",
+    "static/css/2.55d8add8.chunk.css",
+    "static/js/2.01407c2c.chunk.js",
+    "static/css/main.55dbc0fa.chunk.css",
+    "static/js/main.f5cf8895.chunk.js"
+  ]
+}
