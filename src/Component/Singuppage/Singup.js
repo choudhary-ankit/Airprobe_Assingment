@@ -50,7 +50,7 @@ export default class Singup extends Component {
             .catch((error)=>{
                 let errormsg=error.message
                 this.setState({
-                    
+                    loader:false,
                     message:errormsg
                 })
             }) 
@@ -58,7 +58,8 @@ export default class Singup extends Component {
         }
         else{
             this.setState({
-                message:"Your name is less then 3 char"
+                message:"Your name is less then 3 char",
+                loader:false
             })
         }  
         

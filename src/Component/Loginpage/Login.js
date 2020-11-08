@@ -52,7 +52,8 @@ export default class Login extends Component {
         .catch((error)=>{
             let errormsg=error.message
             this.setState({
-                message:errormsg
+                message:errormsg,
+                loader:false,
             })
         })
         
