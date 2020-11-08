@@ -1,4 +1,6 @@
-.section_center{
+.body{
+    margin-top: 55px;
+}.section_center{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -11,9 +13,35 @@
     grid-gap: 80px;
     align-items: center;
     margin-top: 50px;
+    
 }
 .img_para{
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+}
+@media only screen and (max-width: 600px){
+    .grid_arrng{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 80px;
+        align-items: center;
+        margin-top: 50px;
+    }
+   .heading{
+       text-align: center;
+   }
+}
+@media only screen and (max-width: 800px){
+    .grid_arrng{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 80px;
+        align-items: center;
+        margin-top: 50px;
+    }
+    .heading{
+        text-align: center;
+    }
 }

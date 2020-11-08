@@ -59,5 +59,21 @@
     font-size: 15px;
     font-weight: bold;
     border-bottom:  2px solid #ffad06;
-    color: #ff105f;
+    color: gray;
+}
+.notauthorize{
+    width: 250px;
+    color: red;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+@media only screen and (max-width: 600px){
+    .card{
+        position: relative;
+        width: 350px;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+    }
 }

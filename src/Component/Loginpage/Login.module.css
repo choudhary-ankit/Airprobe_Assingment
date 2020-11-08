@@ -58,7 +58,7 @@
     font-size: 15px;
     font-weight: bold;
     border-bottom:  2px solid #ffad06;
-    color: #ff105f;
+    color: gray;
 }
 .submit_btn{
     width: 85%;
@@ -78,5 +78,13 @@
     display: flex;
     justify-content: center;
     margin-top: 30px;
-    align-items: center;
+}
+@media only screen and (max-width: 600px){
+    .card{
+        position: relative;
+        width: 350px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+    }
 }
